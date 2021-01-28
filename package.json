@@ -1,0 +1,17 @@
+{
+  "name": "rule-validation-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "errorhandler": "^1.5.1",
+    "express": "~4.16.1",
+    "joi": "^17.3.0",
+    "morgan": "~1.9.1"
+  }
+}

@@ -71,7 +71,7 @@ Response body
 ```
 
 ## Links
-- API Base URL: https://xxxx.herokuapp.com/
+- API Base URL: https://valley-date.herokuapp.com/
 - Repository: https://github.com/chuxmykel/rule-validation-api
 
 

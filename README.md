@@ -13,7 +13,7 @@ To get started, follow the steps listed below:
 ## Features
 The API has two endpoints.
 - `GET /` The home route
-- `POST /validate-rule` The rule validator endpoint.
+- `POST /validate-rule` The rule validation endpoint.
 
 ## Making requests
 ### GET /
@@ -37,12 +37,12 @@ Request body
 ```json
 {
   "rule": {
-      "field": "name",
-      "condition": "contains",
-      "condition_value": "Oghene"
+    "field": "name",
+    "condition": "contains",
+    "condition_value": "Oghene"
   },
   "data": {
-      "name": "James Oghene"
+    "name": "James Oghene"
   }
 }
 ```

@@ -1,6 +1,6 @@
 const { test, expect, describe } = require('@jest/globals');
 
-const validate = require('../utils/rule-validator');
+const validate = require('./rule-validator');
 
 describe('Rule Validator', () => {
   test('Should validate rule for nested JSON objects successfully', () => {
@@ -69,13 +69,13 @@ describe('Rule Validator', () => {
     const payload = {
       rule: {
         field: 'age',
-        condition: 'eq',
+        condition: 'gt',
         condition_value: 34
       },
       data: {
         name: 'James Holden',
         crew: 'Rocinante',
-        age: 34,
+        age: 340,
         position: 'Captain',
         missions: {
           count: 45,
@@ -89,8 +89,8 @@ describe('Rule Validator', () => {
       validation: {
         error: false,
         field: 'age',
-        field_value: 34,
-        condition: 'eq',
+        field_value: 340,
+        condition: 'gt',
         condition_value: 34,
       },
     });
@@ -207,5 +207,25 @@ describe('Rule Validator', () => {
     );
   });
 
-  test.todo('Should respond with appropriate message if the field specified in the rule is missing from the data passed');
+  test('Should throw error if rule field is nested more than 2 levels deep', () => {
+    const payload = {
+      rule: {
+        field: 'flutterwave.ceo.fullName',
+        condition: 'eq',
+        condition_value: 'Olugbenga Agboola',
+      },
+      data: {
+        flutterwave: {
+          ceo: {
+            fullName: 'Olugbenga Agboola',
+            favoriteEmployee: 'Chukwudi Ngwobia'
+          }
+        }
+      },
+    };
+
+    expect(validate.bind(null, payload)).toThrow(
+      'Nesting cannot be more than 2 levels deep.'
+    );
+  });
 });

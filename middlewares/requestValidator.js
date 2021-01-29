@@ -28,9 +28,25 @@ function validateRequestBody(req, res, next) {
         status: 'error',
         data: null,
       });
+  } else if (dataIsInvalid(req.body.data)) {
+    res
+      .status(400)
+      .json({
+        message: 'data should be an object, array or string',
+        status: 'error',
+        data: null,
+      });
   } else {
     next();
   }
+}
+
+function dataIsInvalid(data) {
+  const dataType = typeof data;
+  if (dataType === 'string' || dataType === 'object') {
+    return false;
+  }
+  return true;
 }
 
 module.exports = {

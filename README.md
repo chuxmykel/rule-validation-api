@@ -10,6 +10,12 @@ To get started, follow the steps listed below:
 - Run `yarn` or `npm install` to install all dependenciees.
 - Run `yarn start` or `npm start` and the server will begin to listen for requests.
 
+## Testing
+To run the test suites included, run `yarn test` or `npm test`
+
+## Building
+The APP was developed using ES5 syntax therefore there is no need for transpilation.
+
 ## Features
 The API has two endpoints.
 - `GET /` The home route

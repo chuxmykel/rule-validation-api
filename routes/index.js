@@ -3,10 +3,10 @@ const router = express.Router();
 
 router.get('/', function (_, res) {
   res.json({
-    message: 'My Rule-Validation API',
+    message: 'My Rule-Validation API.',
     status: 'success',
     data: {
-      name: 'Ngwobia, Chukwudi Mike',
+      name: 'Ngwobia, Chukwudi Mike.',
       github: '@chuxmykel',
       email: 'ngwobiachukwudi@gmail.com',
       mobile: '07060854773',

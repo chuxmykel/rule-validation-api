@@ -1,11 +1,10 @@
 const express = require('express');
-const validator = require('../middlewares/validator');
+const requestValidator = require('../middlewares/requestValidator');
 
 const router = express.Router();
-const { validateRequestBody } = validator;
+const { validateRequestBody } = requestValidator;
 
-router.post('/',validateRequestBody, function (req, res) {
-
+router.post('/', validateRequestBody, function (req, res) {
   res.send('Work In Progress');
 });
 

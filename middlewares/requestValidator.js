@@ -32,7 +32,7 @@ function validateRequestBody(req, res, next) {
     res
       .status(400)
       .json({
-        message: 'data should be an object, array or string',
+        message: 'data should be an object, array or string.',
         status: 'error',
         data: null,
       });

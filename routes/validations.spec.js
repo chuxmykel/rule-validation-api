@@ -193,7 +193,7 @@ describe('Rule validation API', () => {
       .end((_, res) => {
         expect(res.status).toBe(400);
         expect(res.body).toEqual({
-          message: 'data should be an object, array or string',
+          message: 'data should be an object, array or string.',
           status: 'error',
           data: null
         });

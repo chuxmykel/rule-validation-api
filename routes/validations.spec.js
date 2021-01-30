@@ -170,7 +170,7 @@ describe('Rule validation API', () => {
       .end((_, res) => {
         expect(res.status).toBe(400);
         expect(res.body).toEqual({
-          message: 'Field 7 is missing from data.',
+          message: 'field 7 is missing from data.',
           status: 'error',
           data: null
         });

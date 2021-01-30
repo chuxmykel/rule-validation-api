@@ -16,10 +16,10 @@ module.exports = function validate(payload) {
       .length === 2 ? data[fields[0]][fields[1]] : data[fields[0]];
 
     if (field_value === undefined) {
-      throw new Error(`Field ${field} is missing from data.`);
+      throw new Error(`field ${field} is missing from data.`);
     }
   } catch (error) {
-    throw new Error(`Field ${field} is missing from data.`);
+    throw new Error(`field ${field} is missing from data.`);
   }
   
 

@@ -171,7 +171,7 @@ describe('Rule Validator', () => {
     };
 
     expect(validate.bind(null, payload)).toThrow(
-      'Field 5 is missing from data.'
+      'field 5 is missing from data.'
     );
   });
 
@@ -186,7 +186,7 @@ describe('Rule Validator', () => {
     };
 
     expect(validate.bind(null, payload)).toThrow(
-      'Field 7 is missing from data.'
+      'field 7 is missing from data.'
     );
   });
 
@@ -203,7 +203,7 @@ describe('Rule Validator', () => {
     };
 
     expect(validate.bind(null, payload)).toThrow(
-      'Field name is missing from data.'
+      'field name is missing from data.'
     );
   });
 

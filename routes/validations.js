@@ -8,8 +8,8 @@ const { validateRequestBody } = requestValidator;
 
 router.post('/', validateRequestBody, function (req, res) {
   const { field } = req.body.rule;
-  const successMessage = `Field ${field} successfully validated.`;
-  const errorMessage = `Field ${field} failed validation.`;
+  const successMessage = `field ${field} successfully validated.`;
+  const errorMessage = `field ${field} failed validation.`;
 
   try {
     const result = validateRule(req.body);

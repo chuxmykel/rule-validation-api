@@ -108,7 +108,7 @@ describe('Rule validation API', () => {
       .end((_, res) => {
         expect(res.status).toBe(200);
         expect(res.body).toEqual({
-          message: 'Field missions.count successfully validated.',
+          message: 'field missions.count successfully validated.',
           status: 'success',
           data: {
             validation: {
@@ -139,7 +139,7 @@ describe('Rule validation API', () => {
       .end((_, res) => {
         expect(res.status).toBe(400);
         expect(res.body).toEqual({
-          message: 'Field 2 failed validation.',
+          message: 'field 2 failed validation.',
           status: 'error',
           data: {
             validation: {
